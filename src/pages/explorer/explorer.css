@@ -1,0 +1,58 @@
+.card-explorer {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #303030;
+  width: 100%;
+  border-radius: 22px;
+  border: 2px solid #3d3d3d;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.card-explorer__body {
+  display: flex;
+  /* margin-bottom: 24px; */
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+.card-explorer__image {
+  width: 68px;
+  height: 68px;
+  border-radius: 100%;
+  margin-bottom: 9px;
+}
+
+.card-explorer__game,
+.card-explorer__name {
+  font-style: normal;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.card-explorer__button,
+.card-explorer__points {
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-align: center;
+  margin-top: 16px;
+  color: #6fcf97;
+}
+
+.card-explorer__button {
+  width: 100%;
+  border-radius: 8.62px;
+  background: #4294c8;
+  text-transform: uppercase;
+  color: #fff !important;
+  padding: 10px 14px;
+  display: block;
+  font-size: 12px;
+  line-height: 17px;
+}

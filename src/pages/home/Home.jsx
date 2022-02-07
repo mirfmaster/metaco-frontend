@@ -19,8 +19,8 @@ import fetchJson from "../../utils/fetchJson";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Home = () => {
-  const leaderboardUrl = "http://127.0.0.1:3030/leaderboard";
-  const teamUrl = "http://127.0.0.1:3030/teams";
+  const leaderboardUrl = process.env.REACT_APP_API_URL + "/leaderboard";
+  const teamUrl = process.env.REACT_APP_API_URL + "/teams";
   const [leaderboard, setLeaderboard] = useState([]);
   const [teams, setTeams] = useState([]);
   const [tournaments, setTournaments] = useState([]);
@@ -28,7 +28,7 @@ const Home = () => {
     fetchLeaderboard();
     let fetchTournaments = await fetchJson(
       "get",
-      "http://127.0.0.1:3030/tournaments"
+      process.env.REACT_APP_API_URL + "/tournaments"
     );
     setTournaments(fetchTournaments);
   }, []);
@@ -37,9 +37,6 @@ const Home = () => {
     let fetchLeaderboard = await fetchJson("get", leaderboardUrl);
     setLeaderboard(fetchLeaderboard);
   };
-  // useEffect(() => {
-  //   console.log(tournaments);
-  // }, [tournaments]);
 
   const [search, setSearch] = useState("");
   const handleInput = (e) => {
@@ -222,7 +219,7 @@ const Home = () => {
       <Table bordered responsive className="bg-light">
         <thead>
           <tr>
-            <th style={{ width: "50px" }}>Ranking</th>
+            <th style={{ width: "50px" }}>Rank</th>
             <th>Tim / Game ID</th>
             <th>Kapten</th>
             <th>Poin</th>
