@@ -18,10 +18,7 @@ export default function CardExplorer(props) {
           <CardImg
             className="card-explorer__image"
             alt={"Profile " + data.name}
-            src={
-              (data.logo || data.picture) ??
-              "https://metaco.gg/images/default-image-reward-thumb.svg"
-            }
+            src={"https://metaco.gg/images/default-image-reward-thumb.svg"}
           />
           <CardSubtitle className="card-explorer__name" tag="h6">
             {data.name}
