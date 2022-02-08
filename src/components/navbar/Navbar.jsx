@@ -3,12 +3,12 @@ import "./navbar.css";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
-const Menu = () => (
+const Menu = ({ setToggleMenu }) => (
   <>
-    <Link to="/leaderboard">
+    <Link to="/leaderboard" onClick={() => setToggleMenu(false)}>
       <p>Leaderboard</p>
     </Link>
-    <Link to="/explorer">
+    <Link to="/explorer" onClick={() => setToggleMenu(false)}>
       <p>Explorer</p>
     </Link>
   </>
@@ -46,7 +46,7 @@ const Navbar = () => {
         {toggleMenu && (
           <div className="custom-navbar-menu_container scale-up-center">
             <div className="custom-navbar-menu_container-links">
-              <Menu />
+              <Menu setToggleMenu={setToggleMenu} />
             </div>
           </div>
         )}
