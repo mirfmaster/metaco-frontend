@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   Button,
   Card,
@@ -35,7 +36,9 @@ export default function CardExplorer(props) {
               </CardText>
             </>
           )}
-          <Button className="card-explorer__button">LIHAT PROFILE</Button>
+          <Link to={"/profile/" + data.id}>
+            <Button className="card-explorer__button">LIHAT PROFILE</Button>
+          </Link>
         </CardBody>
       </Card>
     </div>

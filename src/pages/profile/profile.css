@@ -1,0 +1,732 @@
+body {
+  color: #fff;
+}
+
+._component-profile-bio {
+  position: relative;
+  margin-bottom: 24px;
+  border: 1px solid #191919;
+}
+
+._component-profile-bio ._profile-picture {
+  min-width: 169px;
+  min-height: 169px;
+  max-width: 169px;
+  max-height: 169px;
+  background-color: #000;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+._component-profile-bio ._profile-picture ._image {
+  width: 169px;
+  height: 169px;
+  background-color: #000;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+._profile-name {
+  color: white;
+}
+
+._inline-comp {
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: inline-flex;
+}
+
+._inline-comp ._name {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  color: #fff;
+  margin-right: 16px;
+  overflow: hidden;
+}
+
+._inline-comp ._btn-edit {
+  position: absolute;
+  right: 30px;
+  border: 2px solid #fff;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  border-radius: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+._nameTag {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+  margin-bottom: 29px;
+}
+
+._component-squad {
+  margin-bottom: 19px;
+  margin-top: 0;
+}
+
+._squad-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+}
+
+._squad-content {
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: inline-flex;
+  margin-top: 16px;
+}
+
+._empty-squad {
+  border: 2px dashed #303030;
+  border-radius: 5px;
+  width: 189px;
+  height: 64px;
+}
+
+._empty-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #56ccf2;
+  cursor: pointer;
+  text-decoration: underline;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+._empty-position {
+  border-radius: 5px;
+  width: 189px;
+  height: 64px;
+  background-color: #0a0a0a;
+}
+
+._empty-position-text {
+  padding: 19px 24px;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: #3d3d3d;
+}
+
+._component-profile-content {
+  position: relative;
+}
+
+._profile-content {
+  background-color: #252525;
+  border: 1px solid #252525;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  width: 100%;
+  height: auto;
+  margin-top: 40px;
+  padding-bottom: 50px;
+}
+
+._menu-tab {
+  text-align: center;
+  width: 100%;
+  margin-top: -23px;
+}
+
+._component-profile-content ._profile-content ._menu-tab ._button-tab {
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: inline-flex;
+  background-color: #0a0a0a;
+  border-radius: 10px;
+}
+._component-profile-content ._profile-content ._menu-tab ._button-tab ._button {
+  width: 149px;
+  height: 40px;
+  padding-top: 9px;
+  font-style: normal;
+  font-size: 14px;
+  text-align: center;
+  color: #efeff5;
+}
+._component-profile-content
+  ._profile-content
+  ._menu-tab
+  ._button-tab
+  ._button.hidup {
+  font-weight: 700;
+  background: rgba(15, 150, 205, 0.1);
+  border: 2px solid #0f96cd;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  box-shadow: inset 0 4px 20px #0f96cd;
+  border-radius: 8px;
+}
+._component-profile-content ._profile-content ._main-content {
+  margin-top: 40px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+._button {
+  cursor: pointer;
+}
+
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-profile
+  ._content-vertical-line,
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-team
+  ._content-vertical-line {
+  width: 100%;
+  border-bottom: 1px solid #3d3d3d;
+  margin-top: 16px;
+}
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-profile
+  ._component-turney-performance,
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-team
+  ._component-turney-performance {
+  margin-top: -52px;
+}
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-profile
+  ._component-turney-performance
+  ._top,
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-team
+  ._component-turney-performance
+  ._top {
+  position: relative;
+}
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-profile
+  ._component-turney-performance
+  ._top
+  ._turney-performance-title,
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-team
+  ._component-turney-performance
+  ._top
+  ._turney-performance-title {
+  position: absolute;
+  left: 0;
+  top: -40px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: #f5f5f5;
+}
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-profile
+  ._component-turney-performance
+  ._top
+  ._turney-performance-title-action,
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-team
+  ._component-turney-performance
+  ._top
+  ._turney-performance-title-action {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: -40px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #0f96cd;
+}
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-profile
+  ._component-turney-performance
+  ._bottom,
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-team
+  ._component-turney-performance
+  ._bottom {
+  margin-top: 80px;
+}
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-profile
+  ._component-turney-performance
+  ._bottom
+  ._blue-box,
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-team
+  ._component-turney-performance
+  ._bottom
+  ._blue-box {
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: inline-flex;
+  width: 100%;
+  height: 124px;
+  background: rgba(15, 150, 205, 0.1);
+  border: 2px solid #0f96cd;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  box-shadow: inset 0 4px 20px #0f96cd;
+  border-radius: 8px;
+}
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-profile
+  ._component-turney-performance
+  ._bottom
+  ._blue-box
+  ._vertical-line,
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-team
+  ._component-turney-performance
+  ._bottom
+  ._blue-box
+  ._vertical-line {
+  height: 90px;
+  margin-top: 2%;
+}
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-profile
+  ._component-turney-performance
+  ._bottom
+  ._blue-box
+  ._point,
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-team
+  ._component-turney-performance
+  ._bottom
+  ._blue-box
+  ._point {
+  width: 170px;
+  padding-top: 25px;
+}
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-profile
+  ._component-turney-performance
+  ._bottom
+  ._blue-box
+  ._point
+  ._score,
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-team
+  ._component-turney-performance
+  ._bottom
+  ._blue-box
+  ._point
+  ._score {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  text-align: center;
+  color: #56ccf2;
+}
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-profile
+  ._component-turney-performance
+  ._bottom
+  ._blue-box
+  ._point
+  ._name,
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-team
+  ._component-turney-performance
+  ._bottom
+  ._blue-box
+  ._point
+  ._name {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #f5f5f5;
+}
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-profile
+  ._component-games,
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-team
+  ._component-games {
+  margin-top: 32px;
+}
+
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-profile
+  ._component-games
+  ._games-title,
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-team
+  ._component-games
+  ._games-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+}
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-profile
+  ._component-games
+  ._games-content,
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-team
+  ._component-games
+  ._games-content {
+  margin-top: 16px;
+}
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-profile
+  ._component-games
+  ._games-content
+  ._list-image-game,
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-team
+  ._component-games
+  ._games-content
+  ._list-image-game {
+  margin-left: 24px;
+}
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-profile
+  ._component-games
+  ._games-content
+  ._list-image-game
+  ._image-game,
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-team
+  ._component-games
+  ._games-content
+  ._list-image-game
+  ._image-game {
+  margin-right: 16px;
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-profile
+  ._component-games
+  ._games-content
+  ._games-comp,
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-team
+  ._component-games
+  ._games-content
+  ._games-comp {
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: inline-flex;
+}
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-profile
+  ._component-games
+  ._games-content
+  ._games-comp
+  ._add-game,
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-team
+  ._component-games
+  ._games-content
+  ._games-comp
+  ._add-game {
+  cursor: pointer;
+  width: 64px;
+  height: 64px;
+  background: #191919;
+  border: 2px dashed #303030;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-profile
+  ._component-games
+  ._games-content
+  ._games-comp
+  ._add-game
+  ._icon-add,
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-team
+  ._component-games
+  ._games-content
+  ._games-comp
+  ._add-game
+  ._icon-add {
+  padding: 19px;
+}
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-profile
+  ._component-games
+  ._games-content
+  ._games-comp
+  ._empty-game-text,
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-team
+  ._component-games
+  ._games-content
+  ._games-comp
+  ._empty-game-text {
+  padding-top: 20px;
+  padding-left: 24px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #f5f5f5;
+  opacity: 0.5;
+}
+
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-profile
+  ._component-badge,
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-team
+  ._component-badge {
+  margin-top: 32px;
+}
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-profile
+  ._component-badge
+  ._badge-title,
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-team
+  ._component-badge
+  ._badge-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+}
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-profile
+  ._component-badge
+  ._badge-content,
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-team
+  ._component-badge
+  ._badge-content {
+  margin-top: 16px;
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: inline-flex;
+}
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-profile
+  ._component-badge
+  ._badge-content
+  ._wrapper-image-badge,
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-team
+  ._component-badge
+  ._badge-content
+  ._wrapper-image-badge {
+  margin-right: 24px;
+}
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-profile
+  ._component-badge
+  ._badge-content
+  ._wrapper-image-badge
+  ._image-badge,
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-team
+  ._component-badge
+  ._badge-content
+  ._wrapper-image-badge
+  ._image-badge {
+  width: 64px;
+}
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-profile
+  ._component-badge
+  ._badge-content
+  ._wrapper-image-badge
+  ._text-badge,
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-team
+  ._component-badge
+  ._badge-content
+  ._wrapper-image-badge
+  ._text-badge {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #f5f5f5;
+  margin-top: 8px;
+}
+
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-profile
+  ._component-certificate,
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-team
+  ._component-certificate {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-profile
+  ._component-certificate
+  ._certificate-title,
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-team
+  ._component-certificate
+  ._certificate-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+  margin-bottom: 16px;
+}
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-profile
+  ._component-certificate
+  ._certificate-content
+  button,
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-team
+  ._component-certificate
+  ._certificate-content
+  button {
+  border-color: #f5f5f5;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #f5f5f5;
+}

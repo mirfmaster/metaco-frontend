@@ -83,7 +83,7 @@ const Home = () => {
     });
     let { flagSubmit, openModal, ...data } = state;
     let submit = await fetchJson("POST", leaderboardUrl, data);
-    console.log(submit);
+
     fetchLeaderboard();
     setState({
       ...state,
