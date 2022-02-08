@@ -10,7 +10,12 @@ import {
 } from "reactstrap";
 import fetchJson from "../../utils/fetchJson";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { TeamExplorer } from "../../components";
+import {
+  AccountComponent,
+  MyProfileComponent,
+  MyTeamComponent,
+  TeamExplorer,
+} from "../../components";
 import "./profile.css";
 import { useParams } from "react-router-dom";
 import { RiEditFill } from "react-icons/ri";
@@ -28,24 +33,9 @@ const Profile = (props) => {
     setProfile(fetchData);
   }, []);
 
-  const fetchData = async () => {};
-
-  const [search, setSearch] = useState("");
-  const handleInput = (e) => {
-    setSearch(e.target.value);
-  };
-
-  useEffect(async () => {
-    fetchData();
-  }, [search]);
-
   const [state, setState] = useState({
     activeTab: "profile",
   });
-
-  useEffect(async () => {
-    await fetchData();
-  }, [state.type]);
 
   const handleActiveTab = (key) => {
     setState({
@@ -55,7 +45,7 @@ const Profile = (props) => {
   };
 
   const isActiveTab = (key) => {
-    return key == state.activeTab ? " hidup" : "";
+    return key == state.activeTab;
   };
   return (
     <Container>
@@ -112,7 +102,7 @@ const Profile = (props) => {
                           src="https://metaco.gg/images/profile/capt-icon.svg"
                           alt="capt"
                         />
-                        Captain
+                        {profile.team_members?.roles}
                       </div>
                     </div>
                   </div>
@@ -127,19 +117,19 @@ const Profile = (props) => {
               <div className="_menu-tab">
                 <div class="_button-tab">
                   <a
-                    class={"_button" + isActiveTab("profile")}
+                    class={"_button" + (isActiveTab("profile") ? " hidup" : "")}
                     onClick={() => handleActiveTab("profile")}
                   >
                     My Profile
                   </a>
                   <a
-                    class={"_button" + isActiveTab("myteam")}
+                    class={"_button" + (isActiveTab("myteam") ? " hidup" : "")}
                     onClick={() => handleActiveTab("myteam")}
                   >
                     My Team
                   </a>
                   <a
-                    class={"_button" + isActiveTab("account")}
+                    class={"_button" + (isActiveTab("account") ? " hidup" : "")}
                     onClick={() => handleActiveTab("account")}
                   >
                     Account
@@ -147,154 +137,13 @@ const Profile = (props) => {
                 </div>
               </div>
               <div className="_main-content">
-                <div className="_tab-my-profile">
-                  <Row>
-                    <Col sm={12} md={12} lg={6}>
-                      <div class="_component-turney-performance">
-                        <div class="_top">
-                          <div class="_turney-performance-title">
-                            Performa Turnamen
-                          </div>
-                        </div>
-                        <div class="_bottom">
-                          <div class="_blue-box">
-                            <div class="_point">
-                              <div class="_score">70</div>
-                              <div class="_name">Penampilan</div>
-                            </div>
-                            <img
-                              class="_vertical-line"
-                              src="https://metaco.gg/images/profile/vertical-line.png"
-                              alt="line"
-                            />
-                            <div class="_point">
-                              <div class="_score">33</div>
-                              <div class="_name">3 Besar</div>
-                            </div>
-                            <img
-                              class="_vertical-line"
-                              src="https://metaco.gg/images/profile/vertical-line.png"
-                              alt="line"
-                            />
-                            <div class="_point">
-                              <div class="_score">20</div>
-                              <div class="_name">Juara Satu</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="_component-games">
-                        <div class="_games-title">Games</div>
-                        <div class="_games-content">
-                          <div class="_games-comp">
-                            <div class="_add-game">
-                              <img
-                                class="_icon-add"
-                                src="https://metaco.gg/images/profile/plus.png"
-                                alt="add game"
-                              />
-                            </div>
-                            <div class="_empty-game-text">
-                              Tambahkan game favoritmu
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="_component-games">
-                        <div class="_games-title">Keahlian</div>
-                        <div class="_games-content">
-                          <div class="_games-comp">
-                            <div class="_add-game">
-                              <img
-                                class="_icon-add"
-                                src="https://metaco.gg/images/profile/plus.png"
-                                alt="add game"
-                              />
-                            </div>
-                            <div class="_empty-game-text">
-                              Tambahkan keahlianmu
-                            </div>
-                          </div>
-                        </div>
-                        <div class="_component-badge">
-                          <div class="_badge-title">
-                            Kumpulan Badges{" "}
-                            <img
-                              style={{ cursor: "pointer" }}
-                              src="https://metaco.gg/images/profile/info.svg"
-                              alt="info"
-                            />{" "}
-                          </div>
-                          <div class="_badge-content">
-                            <div class="_wrapper-image-badge">
-                              <img
-                                class="_image-badge"
-                                src="https://metaco.gg/images/profile/lock-badge.png"
-                                alt="badge"
-                                draggable="false"
-                              />
-                              <div class="_text-badge">?</div>
-                            </div>
-                            <div class="_wrapper-image-badge">
-                              <img
-                                class="_image-badge"
-                                src="https://metaco.gg/images/profile/lock-badge.png"
-                                alt="badge"
-                                draggable="false"
-                              />
-                              <div class="_text-badge">?</div>
-                            </div>
-                            <div class="_wrapper-image-badge">
-                              <img
-                                class="_image-badge"
-                                src="https://metaco.gg/images/profile/lock-badge.png"
-                                alt="badge"
-                                draggable="false"
-                              />
-                              <div class="_text-badge">?</div>
-                            </div>
-                            <div class="_wrapper-image-badge">
-                              <img
-                                class="_image-badge"
-                                src="https://metaco.gg/images/profile/lock-badge.png"
-                                alt="badge"
-                                draggable="false"
-                              />
-                              <div class="_text-badge">?</div>
-                            </div>
-                            <div class="_wrapper-image-badge">
-                              <img
-                                class="_image-badge"
-                                src="https://metaco.gg/images/profile/lock-badge.png"
-                                alt="badge"
-                                draggable="false"
-                              />
-                              <div class="_text-badge">?</div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="_component-certificate">
-                          <div class="_certificate-title">E-CERTIFICATE</div>
-                          <div class="_certificate-content">
-                            <button
-                              type="button"
-                              class="btn btn-outline-secondary"
-                            >
-                              <img
-                                src="https://metaco.gg/images/profile/download.png"
-                                alt="download"
-                              />
-                              DOWNLOAD E-CERTIFICATE
-                            </button>
-                          </div>
-                        </div>
-                        {/* <Col sm={12} md={12} lg={6}>
-
-                        </Col> */}
-                      </div>
-                    </Col>
-                  </Row>
-                </div>
+                {isActiveTab("profile") ? (
+                  <MyProfileComponent />
+                ) : isActiveTab("myteam") ? (
+                  <MyTeamComponent />
+                ) : (
+                  <AccountComponent profile={profile} />
+                )}
               </div>
             </div>
           </div>

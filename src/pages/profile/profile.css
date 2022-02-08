@@ -730,3 +730,150 @@ body {
   text-align: center;
   color: #f5f5f5;
 }
+
+._component-profile-content ._profile-content ._main-content ._tab-my-team {
+  text-align: center;
+}
+
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-team
+  ._add-game {
+  margin-top: 24px;
+  background: #191919;
+  border: 2px dashed #303030;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 8px;
+  text-align: center;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-team
+  ._add-game
+  ._add-game-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #fff;
+  opacity: 0.5;
+  margin-bottom: 26px;
+  margin-top: 10px;
+}
+
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-my-team
+  ._add-game
+  ._add-game-icon {
+  margin-bottom: 22px;
+  cursor: pointer;
+}
+
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-account
+  ._component-profile-information {
+  margin-left: 33%;
+}
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-account
+  ._component-profile-information
+  ._profile-information-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+  margin-bottom: 24px;
+}
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-account
+  ._component-profile-information
+  ._profile-information-notes {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #f5f5f5;
+  opacity: 0.5;
+  margin-left: -22px;
+}
+
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-account
+  ._component-profile-information
+  ._form-group-comp
+  ._form-input-comp {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #f5f5f5;
+  opacity: 0.5;
+  padding: 8px 16px;
+  pointer-events: none;
+  width: 305px;
+  height: 40px;
+  background: #3d3d3d;
+  border: 2px solid #3d3d3d;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-account
+  ._component-profile-information
+  ._form-group-comp
+  ._form-input-comp {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #f5f5f5;
+  opacity: 0.5;
+  padding: 8px 16px;
+  pointer-events: none;
+  width: 305px;
+  height: 40px;
+  background: #3d3d3d;
+  border: 2px solid #3d3d3d;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+._component-profile-content
+  ._profile-content
+  ._main-content
+  ._tab-account
+  ._component-profile-information
+  ._form-group-comp
+  ._btn-edit-comp {
+  position: absolute;
+  right: -15px;
+  top: 31px;
+  border: 2px solid #fff;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  border-radius: 20%;
+}
