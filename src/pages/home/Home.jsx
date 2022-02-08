@@ -17,7 +17,8 @@ import {
 } from "reactstrap";
 import fetchJson from "../../utils/fetchJson";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import { CardLeaderboard } from "../../components";
+import "./home.css";
 const Home = () => {
   const leaderboardUrl = process.env.REACT_APP_API_URL + "/leaderboard";
   const teamUrl = process.env.REACT_APP_API_URL + "/teams";
@@ -215,29 +216,36 @@ const Home = () => {
           </div>
         </Col>
       </Row>
-
-      <Table bordered responsive className="bg-light">
-        <thead>
-          <tr>
-            <th style={{ width: "50px" }}>Rank</th>
-            <th>Tim / Game ID</th>
-            <th>Kapten</th>
-            <th>Poin</th>
-          </tr>
-        </thead>
-        <tbody>
+      <Container fluid={true}>
+        <Row>
+          <Col sm={12} md="12" lg={12}>
+            <table style={{ width: "100%", marginBottom: 24 }}>
+              <tbody>
+                <tr>
+                  <td width="100px">RANKING</td>
+                  <td width="100px"></td>
+                  <td
+                    width="450px"
+                    style={{ textAlign: "left", paddingLeft: 12 }}
+                  >
+                    TIM / GAME ID
+                  </td>
+                  <td style={{ textAlign: "left", paddingLeft: 12 }}>KAPTEN</td>
+                  <td width="80px">POIN</td>
+                </tr>
+              </tbody>
+            </table>
+          </Col>
           {leaderboard.map((data, index) => {
+            let position = index + 1;
             return (
-              <tr key={data.name}>
-                <th scope="row">{index + 1}</th>
-                <td>{data.name}</td>
-                <td>{data.captain_name}</td>
-                <td>{data.total_point ?? 0}</td>
-              </tr>
+              <Col key={position} sm={12} md={12} lg={12}>
+                <CardLeaderboard data={data} position={position} />
+              </Col>
             );
           })}
-        </tbody>
-      </Table>
+        </Row>
+      </Container>
     </Container>
   );
 };

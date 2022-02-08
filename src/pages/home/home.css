@@ -1,0 +1,22 @@
+._list-table {
+  margin-bottom: 20px;
+  width: 100%;
+  background: rgba(15, 150, 205, 0.1);
+  border: 2px solid #0f96cd;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+._list-table ._table-winner {
+  width: 100%;
+  margin: 0;
+}
+._winner-logo {
+  width: 48px;
+  margin: 8px;
+}
+._team-logo {
+  width: 45px;
+  height: 45px;
+}
